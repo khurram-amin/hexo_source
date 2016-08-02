@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-08-02T17:11:48.838Z</updated>
+  <updated>2016-08-02T19:13:33.438Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learning to Count Objects inImages by Victor Lemptisky and Andrew Zisserman</title>
+    <link href="http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/"/>
+    <id>http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/</id>
+    <published>2016-08-02T19:00:00.000Z</published>
+    <updated>2016-08-02T19:13:33.438Z</updated>
+    
+    <content type="html"><![CDATA[<p>Lets get Started.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Lets get Started.&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="Computer Vision" scheme="http://mkhurram.com/tags/Computer-Vision/"/>
+    
+      <category term="Crowd" scheme="http://mkhurram.com/tags/Crowd/"/>
+    
+      <category term="Machine Learning" scheme="http://mkhurram.com/tags/Machine-Learning/"/>
+    
+      <category term="Reviews" scheme="http://mkhurram.com/tags/Reviews/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -39,32 +67,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>DigitalOcean&#39;s First Post</title>
-    <link href="http://mkhurram.com/2015/12/30/Learning-to-Count-Objects-in-Images/"/>
-    <id>http://mkhurram.com/2015/12/30/Learning-to-Count-Objects-in-Images/</id>
-    <published>2015-12-30T19:00:00.000Z</published>
-    <updated>2016-08-02T19:03:09.286Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Markdown_goes_here-">Markdown goes here.</h2><p><strong>This is our first post!</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Markdown_goes_here-&quot;&gt;Markdown goes here.&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;This is our first post!&lt;/strong&gt;&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://mkhurram.com/categories/Hexo/"/>
-    
-    
-      <category term="Test" scheme="http://mkhurram.com/tags/Test/"/>
-    
-      <category term="Blog" scheme="http://mkhurram.com/tags/Blog/"/>
     
   </entry>
   
