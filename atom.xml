@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-08-02T19:13:33.438Z</updated>
+  <updated>2016-08-02T19:24:29.250Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Learning to Count Objects inImages by Victor Lemptisky and Andrew Zisserman</title>
+    <title>Learning to Count Objects in Images by V. Lemptisky &amp; A. Zisserman</title>
     <link href="http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/"/>
     <id>http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/</id>
     <published>2016-08-02T19:00:00.000Z</published>
-    <updated>2016-08-02T19:13:33.438Z</updated>
+    <updated>2016-08-02T19:24:29.250Z</updated>
     
     <content type="html"><![CDATA[<p>Lets get Started.</p>
 ]]></content>
