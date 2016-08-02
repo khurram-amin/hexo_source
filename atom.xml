@@ -42,4 +42,30 @@
     
   </entry>
   
+  <entry>
+    <title>DigitalOcean&#39;s First Post</title>
+    <link href="http://mkhurram.com/2015/12/30/Learning-to-Count-Objects-in-Images/"/>
+    <id>http://mkhurram.com/2015/12/30/Learning-to-Count-Objects-in-Images/</id>
+    <published>2015-12-30T19:00:00.000Z</published>
+    <updated>2016-08-02T19:03:09.286Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Markdown_goes_here-">Markdown goes here.</h2><p><strong>This is our first post!</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Markdown_goes_here-&quot;&gt;Markdown goes here.&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;This is our first post!&lt;/strong&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://mkhurram.com/categories/Hexo/"/>
+    
+    
+      <category term="Test" scheme="http://mkhurram.com/tags/Test/"/>
+    
+      <category term="Blog" scheme="http://mkhurram.com/tags/Blog/"/>
+    
+  </entry>
+  
 </feed>
