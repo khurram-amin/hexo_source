@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yet another blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://mkhurram.com/"/>
+  <updated>2016-08-02T21:13:39.206Z</updated>
+  <id>http://mkhurram.com/</id>
+  
+  <author>
+    <name>Khurram Amin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learning to Count Objects in Images by V. Lemptisky &amp; A. Zisserman</title>
+    <link href="http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/"/>
+    <id>http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/</id>
+    <published>2016-08-02T19:00:00.000Z</published>
+    <updated>2016-08-02T21:13:39.206Z</updated>
+    
+    <content type="html"><![CDATA[<p>Download PDF from <a href="http://papers.nips.cc/paper/4043-learning-to-count-objects-in-images.pdf" target="_blank" rel="external">here</a>. Paper Citations = <a href="https://scholar.google.com.pk/scholar?q=learning+to+count+objects+in+images" target="_blank" rel="external">148</a>. Published in <strong>Advances in Neural Information Processing Systems</strong> in <strong>2010</strong>.</p>
+<!--toc-->
+<h1 id="Paper_Summary">Paper Summary</h1><h2 id="2-minute_Summary">2-minute Summary</h2><p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+<h2 id="Detailed_Summary">Detailed Summary</h2><h3 id="Assumptions">Assumptions</h3><p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+<h3 id="Methodology">Methodology</h3><p>Given a set of images</p>
+<h3 id="Results">Results</h3><p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+<h2 id="Key_Insights">Key Insights</h2><p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+<h2 id="Criticism">Criticism</h2><p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+<h2 id="Applications">Applications</h2><p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Download PDF from &lt;a href=&quot;http://papers.nips.cc/paper/4043-learning-to-count-objects-in-images.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;
+    
+    </summary>
+    
+    
+      <category term="Computer Vision" scheme="http://mkhurram.com/tags/Computer-Vision/"/>
+    
+      <category term="Crowd" scheme="http://mkhurram.com/tags/Crowd/"/>
+    
+      <category term="Machine Learning" scheme="http://mkhurram.com/tags/Machine-Learning/"/>
+    
+      <category term="Reviews" scheme="http://mkhurram.com/tags/Reviews/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://mkhurram.com/2016/08/02/hello-world/"/>
+    <id>http://mkhurram.com/2016/08/02/hello-world/</id>
+    <published>2016-08-02T17:11:48.838Z</published>
+    <updated>2016-08-02T17:11:48.838Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
