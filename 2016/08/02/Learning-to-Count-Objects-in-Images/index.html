@@ -18,11 +18,8 @@
     <meta name="description" content="Download PDF from here. Paper Citations = 148. Published in Advances in Neural Information Processing Systems in 2010.
 
 
-
-
-Summary
-Assumptions
-Suppose there exists some feature set $x$ such that its l">
+1-minute Summary
+Number of objects in a scene can be determined using standard">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Learning to Count Objects in Images by Lempitsky & Zisserman">
 <meta property="og:url" content="http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/index.html">
@@ -30,24 +27,18 @@ Suppose there exists some feature set $x$ such that its l">
 <meta property="og:description" content="Download PDF from here. Paper Citations = 148. Published in Advances in Neural Information Processing Systems in 2010.
 
 
-
-
-Summary
-Assumptions
-Suppose there exists some feature set $x$ such that its l">
+1-minute Summary
+Number of objects in a scene can be determined using standard">
 <meta property="og:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/results.png?raw=true">
 <meta property="og:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/qualitative_result.png?raw=true">
-<meta property="og:updated_time" content="2016-08-03T02:01:08.086Z">
+<meta property="og:updated_time" content="2016-08-03T15:15:43.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learning to Count Objects in Images by Lempitsky & Zisserman">
 <meta name="twitter:description" content="Download PDF from here. Paper Citations = 148. Published in Advances in Neural Information Processing Systems in 2010.
 
 
-
-
-Summary
-Assumptions
-Suppose there exists some feature set $x$ such that its l">
+1-minute Summary
+Number of objects in a scene can be determined using standard">
 <meta name="twitter:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/results.png?raw=true">
 <meta name="twitter:creator" content="@m_khurram_amin">
     
@@ -228,11 +219,10 @@ Suppose there exists some feature set $x$ such that its l">
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
             <p>Download PDF from <a href="http://papers.nips.cc/paper/4043-learning-to-count-objects-in-images.pdf" target="_blank" rel="external">here</a>. Paper Citations = <a href="https://scholar.google.com.pk/scholar?q=learning+to+count+objects+in+images" target="_blank" rel="external">148</a>. Published in <strong>Advances in Neural Information Processing Systems</strong> in <strong>2010</strong>.</p>
-<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#summary"><span class="toc-text">Summary</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#assumptions"><span class="toc-text">Assumptions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#methodology"><span class="toc-text">Methodology</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#input"><span class="toc-text">Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-automatically-count-objects"><span class="toc-text">How to automatically count objects?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-measure-dist.-."><span class="toc-text">How to measure \(dist(. , .)\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-establish-ground-truth-density"><span class="toc-text">How to establish ground-truth density?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-text">Results</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#key-insights"><span class="toc-text">Key Insights</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#criticism"><span class="toc-text">Criticism</span></a></li></ol>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#minute-summary"><span class="toc-text">1-minute Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#summary"><span class="toc-text">Summary</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#assumptions"><span class="toc-text">Assumptions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#methodology"><span class="toc-text">Methodology</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#input"><span class="toc-text">Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-automatically-count-objects"><span class="toc-text">How to automatically count objects?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-measure-dist.-."><span class="toc-text">How to measure \(dist(. , .)\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-establish-ground-truth-density"><span class="toc-text">How to establish ground-truth density?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-text">Results</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#key-insights"><span class="toc-text">Key Insights</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#criticism"><span class="toc-text">Criticism</span></a></li></ol>
 
-<!--# 2-minute Summary
-Not available since the *Detailed Summary* is not more than 5mins-->
-
+<h1 id="minute-summary">1-minute Summary</h1>
+<p>Number of objects in a scene can be determined using standard regression techniques. Some features are extracted from an image and then a linear transformation that transforms the features into count is learned by minimizing a cost function. In this paper, authors propose a novel distance measure which coupled with sparse annotations of objects in images can be used to solve this learning problem more efficently.</p>
 <h1 id="summary">Summary</h1>
 <h2 id="assumptions">Assumptions</h2>
 <span class="highlight-text danger">Suppose there exists some feature set $x$ such that its linear transformation maps to the ground-truth (object/crowd) density function i.e. $ F_i^0(p) = w^T x_p^i $ whereas $x_p^i$ is feature vector at pixel $p$ in image $i$. </span>
