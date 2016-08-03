@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-08-03T00:01:18.854Z</updated>
+  <updated>2016-08-03T00:03:26.386Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/"/>
     <id>http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/</id>
     <published>2016-08-02T19:00:00.000Z</published>
-    <updated>2016-08-03T00:01:18.854Z</updated>
+    <updated>2016-08-03T00:03:26.386Z</updated>
     
     <content type="html"><![CDATA[<p>Download PDF from <a href="http://papers.nips.cc/paper/4043-learning-to-count-objects-in-images.pdf" target="_blank" rel="external">here</a>. Paper Citations = <a href="https://scholar.google.com.pk/scholar?q=learning+to+count+objects+in+images" target="_blank" rel="external">148</a>. Published in <strong>Advances in Neural Information Processing Systems</strong> in <strong>2010</strong>.</p>
-<p>&lt;–toc–&gt;</p>
+<!--toc-->
+    
 <h1 id="minute-summary">2-minute Summary</h1>
 <p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
 <h1 id="detailed-summary">Detailed Summary</h1>
