@@ -209,7 +209,8 @@
 <p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
 <h1 id="detailed-summary">Detailed Summary</h1>
 <h2 id="assumptions">Assumptions</h2>
-<p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+<span class="highlight-text danger">Suppose there exists some feature set $x$ such that its linear transformation maps to the ground-truth (object/crowd) density function i.e. $ F_i(p) = w^T x_p^i $ whereas $x_p^i$ is feature value at pixel $p$ in image $i$. </span>
+
 <h2 id="methodology">Methodology</h2>
 <h3 id="input">Input</h3>
 <ol style="list-style-type: decimal">
@@ -218,8 +219,7 @@
 <li><p>Annotations: a set of 2D points <span class="math">\(\textbf{P}_i = \{ P_1, P_2, ..., P_{C(i)} \} \)</span> representing the presence of object. <span class="math">\(C(i)\)</span> is the total count of objects in image <span class="math">\(i\)</span></p></li>
 </ol>
 <h3 id="how-to-automatically-count-objects">How to automatically count objects?</h3>
-<p>Suppose there exists some feature set <span class="math">\(x\)</span> such that its linear transformation maps to the ground-truth (object/crowd) density function i.e. $ F_i(p) = w^T x_p^i $ whereas <span class="math">\(x_p^i\)</span> is feature value at pixel <span class="math">\(p\)</span> in image <span class="math">\(i\)</span>.</p>
-<p>Then this linear transformation can be learned by solving the following equation <span class="math">\[
+<p>The linear transformation, that can convert <span class="math">\(x_p^i\)</span> to <span class="math">\(F_i^0(p)\)</span> can be learned by solving the following equation <span class="math">\[
 w = \underset{w}{\arg\min} \bigg( w^T w + \lambda \sum_{i=1}^{N} dist\big( F_i^0(.), F_i(. \vert w)\big ) \bigg)
 \]</span> Once the transformation parameters <span class="math">\(w\)</span> are known, count for any new image can be determined using <span class="math">\[
 \text{number of objects in image I} = \sum_{p \in I} w^T x_p
@@ -235,11 +235,6 @@ D_{MESA}( F_1, F_2 ) = \underset{B \in \textbf{B} }{max} \bigg \vert \sum_{p \in
 <!--Given a set of images $I_1, I_2, ..., I_N$ and a ground-truth density map $F_i^0(p)$ for each image $i$ such that $\sum_{p \in I_i} F_i^0(p)$ equals the total number of objects present in the image then a set of parameters $w$ can be learned such that the mapping function $F_i(p \vert w)$ results in minimum error over the whole dataset. -->
 
 <h2 id="results">Results</h2>
-<div class="figure fig-100" style="width:;"><img class="fig-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/results.png?raw=true" alt=""></div>
-
-
-<div class="figure fig-100" style="width:;"><img class="fig-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/qualitative_result.png?raw=true" alt=""></div>
-
 <h1 id="key-insights">Key Insights</h1>
 <p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
 <h1 id="criticism">Criticism</h1>
