@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-08-03T01:21:39.398Z</updated>
+  <updated>2016-08-03T01:51:35.910Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -16,18 +16,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Learning to Count Objects in Images by Lemptisky &amp; Zisserman</title>
+    <title>Learning to Count Objects in Images by Lempitsky &amp; Zisserman</title>
     <link href="http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/"/>
     <id>http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/</id>
     <published>2016-08-02T19:00:00.000Z</published>
-    <updated>2016-08-03T01:21:39.398Z</updated>
+    <updated>2016-08-03T01:51:35.910Z</updated>
     
     <content type="html"><![CDATA[<p>Download PDF from <a href="http://papers.nips.cc/paper/4043-learning-to-count-objects-in-images.pdf" target="_blank" rel="external">here</a>. Paper Citations = <a href="https://scholar.google.com.pk/scholar?q=learning+to+count+objects+in+images" target="_blank" rel="external">148</a>. Published in <strong>Advances in Neural Information Processing Systems</strong> in <strong>2010</strong>.</p>
 <!--toc-->
 
-<h1 id="minute-summary">2-minute Summary</h1>
-<p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
-<h1 id="detailed-summary">Detailed Summary</h1>
+<!--# 2-minute Summary
+Not available since the *Detailed Summary* is not more than 5mins-->
+
+<h1 id="summary">Summary</h1>
 <h2 id="assumptions">Assumptions</h2>
 <span class="highlight-text danger">Suppose there exists some feature set $x$ such that its linear transformation maps to the ground-truth (object/crowd) density function i.e. $ F_i(p) = w^T x_p^i $ whereas $x_p^i$ is feature value at pixel $p$ in image $i$. </span>
 
@@ -63,11 +64,18 @@ D_{MESA}( F_1, F_2 ) = \underset{B \in \textbf{B} }{max} \bigg \vert \sum_{p \in
 
 
 <h1 id="key-insights">Key Insights</h1>
-<p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+<ol style="list-style-type: decimal">
+<li>The usage of sparse annotations to solve counting-as-regression-problem can help to increase dataset size by using different box hypothesis over the same image.</li>
+</ol>
 <h1 id="criticism">Criticism</h1>
-<p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
-<h1 id="applications">Applications</h1>
-<p>Almost all good research papers try to provide an answer a specific question. (Sometimes the question is a natural one that people specifically set out to answer; sometimes a good idea just ends up answering a worthwhile question.) If you can succinctly describe a paper, you have probably recognized the question the authors started with with and the answer they provide. Once you have focused on the main idea, you can go back and try to outline the paper to gain insight into more specific details. Indeed, if summarizing the paper in one or two sentences is easy, go back and try to deepen your outline by summarizing the three or four most important subpoints of the main idea.</p>
+<ol style="list-style-type: decimal">
+<li><p>Mean Absolute Error (mAE) for object counting is not a good error measure since it entirely hides the complexity of scene. For example a mAE of 1 object/image corresponds to ~0.1% error if there were 1000 objects present in scene. But if there were only 0, 1 or 2 objects then the same measure corresponds to ~50% error.</p></li>
+<li><p>The assumption that there exists a linearly-separable-feature-space is very <span class="highlight-text orange">strict </span> and is not valid for complex scene structures.</p></li>
+</ol>
+<!-- # Applications -->
+
+
+
 ]]></content>
     
     <summary type="html">
