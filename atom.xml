@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-08-03T01:51:35.910Z</updated>
+  <updated>2016-08-03T02:01:08.086Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/"/>
     <id>http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/</id>
     <published>2016-08-02T19:00:00.000Z</published>
-    <updated>2016-08-03T01:51:35.910Z</updated>
+    <updated>2016-08-03T02:01:08.086Z</updated>
     
     <content type="html"><![CDATA[<p>Download PDF from <a href="http://papers.nips.cc/paper/4043-learning-to-count-objects-in-images.pdf" target="_blank" rel="external">here</a>. Paper Citations = <a href="https://scholar.google.com.pk/scholar?q=learning+to+count+objects+in+images" target="_blank" rel="external">148</a>. Published in <strong>Advances in Neural Information Processing Systems</strong> in <strong>2010</strong>.</p>
 <!--toc-->
@@ -30,7 +30,7 @@ Not available since the *Detailed Summary* is not more than 5mins-->
 
 <h1 id="summary">Summary</h1>
 <h2 id="assumptions">Assumptions</h2>
-<span class="highlight-text danger">Suppose there exists some feature set $x$ such that its linear transformation maps to the ground-truth (object/crowd) density function i.e. $ F_i(p) = w^T x_p^i $ whereas $x_p^i$ is feature value at pixel $p$ in image $i$. </span>
+<span class="highlight-text danger">Suppose there exists some feature set $x$ such that its linear transformation maps to the ground-truth (object/crowd) density function i.e. $ F_i^0(p) = w^T x_p^i $ whereas $x_p^i$ is feature vector at pixel $p$ in image $i$. </span>
 
 <h2 id="methodology">Methodology</h2>
 <h3 id="input">Input</h3>
