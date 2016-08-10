@@ -30,7 +30,7 @@ The pr">
 <meta property="og:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/3.jpg?raw=true">
 <meta property="og:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/pjimage.png?raw=true">
 <meta property="og:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/manualAnnot.png?raw=true">
-<meta property="og:updated_time" content="2016-08-10T22:11:54.830Z">
+<meta property="og:updated_time" content="2016-08-10T22:19:56.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to count number of pilgrims in 27th Ramazan image">
 <meta name="twitter:description" content="Try to count number of persons in this image. Got any guess? Post in comments. This image was taken on 03 July 2016 (On the eve of 26th Ramadan after Taraweh) at Masjid-Al-Haram, Mecca, KSA.
@@ -255,6 +255,11 @@ function createPatches (image, annotations, patch_size )
         save(p)
 }
 </pre>
+
+
+
+<figure class="codeblock codeblock--tabbed"><figcaption><span>[name] [link]</span><ul class="tabs"><li class="tab active">createPatches</li></ul></figcaption><div class="tabs-content"><figure class="highlight plain" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function createPatches (image, annotations, patch_size )</span><br><span class="line">{</span><br><span class="line">	for i = 1 : length ( $annotations$ )</span><br><span class="line">		p = extractPatch(image, annotations(i), patch_size);</span><br><span class="line">		save(p)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
+
 
 
 

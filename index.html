@@ -244,6 +244,11 @@ function createPatches (image, annotations, patch_size )
 
 
 
+<figure class="codeblock codeblock--tabbed"><figcaption><span>[name] [link]</span><ul class="tabs"><li class="tab active">createPatches</li></ul></figcaption><div class="tabs-content"><figure class="highlight plain" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function createPatches (image, annotations, patch_size )</span><br><span class="line">{</span><br><span class="line">	for i = 1 : length ( $annotations$ )</span><br><span class="line">		p = extractPatch(image, annotations(i), patch_size);</span><br><span class="line">		save(p)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
+
+
+
+
                     
                         
                     
