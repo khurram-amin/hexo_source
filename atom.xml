@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-08-10T21:41:45.466Z</updated>
+  <updated>2016-08-10T22:11:54.830Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -20,12 +20,49 @@
     <link href="http://mkhurram.com/2016/08/10/How-to-count-number-of-pilgrims-in-27th-Ramazan-image/"/>
     <id>http://mkhurram.com/2016/08/10/How-to-count-number-of-pilgrims-in-27th-Ramazan-image/</id>
     <published>2016-08-10T19:00:00.000Z</published>
-    <updated>2016-08-10T21:41:45.466Z</updated>
+    <updated>2016-08-10T22:11:54.830Z</updated>
     
-    <content type="html"><![CDATA[<div class="figure fig-100" style="width:;"><img class="fig-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/manualAnnot.png?raw=true" alt=""></div>
-
+    <content type="html"><![CDATA[<div class="figure fig-100" style="width:;"><img class="fig-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/3.jpg?raw=true" alt=""></div>
+<p>Try to count number of persons in this image. Got any guess? Post in comments. This image was taken on 03 July 2016 (On the eve of 26th Ramadan after Taraweh) at Masjid-Al-Haram, Mecca, KSA.</p>
+<!-- toc -->
 
 <p>The problem of counting number of objects in scenes, similar to the above one, is far from being solved. Even the state-of-art method can detect upto 2k-5k objects in a single image. So what about the scenes where number of objects (persons in this scene) are of order 1e4–1e5?</p>
+<h2 id="how-about-detecting-counting-heads">How about Detecting &amp; Counting Heads?</h2>
+<ol start="0" style="list-style-type: decimal">
+<li>Generate training data</li>
+<li>Train a classifier to detect human head</li>
+<li>Generate prospective-incorporated-multi-scalar-patches from this image</li>
+<li>Pass through the trained classifier</li>
+<li>Visualize</li>
+<li>Analyse results</li>
+<li>(Optional) Generate a density map</li>
+</ol>
+<h3 id="training-data">Training Data</h3>
+<p>As training data we used some of the images in UCF dataset and one manually annotated earlier image of Masjid-al-Haram. The sample images are shown below: <div class="figure fig-100" style="width:;"><img class="fig-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/pjimage.png?raw=true" alt=""></div> <div class="figure fig-100" style="width:;"><img class="fig-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/manualAnnot.png?raw=true" alt=""></div></p>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example-seeds').pseudocode({
+        keywords: {
+            'if': '#000066',
+            'for': '#000066',
+            'each': '#000066',
+            'return': '#000066',
+            'function': '#000066'
+        }
+    });
+});
+</script>
+
+<pre id="example-seeds">
+function createPatches (image, annotations, patch_size )
+{
+    for i = 1 : length ( $annotations$ )
+        p = extractPatch(image, annotations(i), patch_size);
+        save(p)
+}
+</pre>
+
+
 ]]></content>
     
     <summary type="html">
