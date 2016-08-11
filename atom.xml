@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-08-11T00:03:30.534Z</updated>
+  <updated>2016-08-11T00:08:48.198Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://mkhurram.com/2016/08/10/How-to-count-number-of-pilgrims-in-27th-Ramazan-image/"/>
     <id>http://mkhurram.com/2016/08/10/How-to-count-number-of-pilgrims-in-27th-Ramazan-image/</id>
     <published>2016-08-10T19:00:00.000Z</published>
-    <updated>2016-08-11T00:03:30.534Z</updated>
+    <updated>2016-08-11T00:08:48.198Z</updated>
     
     <content type="html"><![CDATA[<!-- endcontent --><div class="figure figure--fullWidth"><img class="figure-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/3.jpg?raw=true" alt=""><span class="caption"></span></div><!-- content -->
 <p>Try to count number of persons in this image. Got any guess? Post in comments. This image was taken on 03 July 2016 (On the eve of 26th Ramadan after Taraweh) at Masjid-Al-Haram, Mecca, KSA.</p>
@@ -50,8 +50,8 @@
     <link rel="stylesheet" href="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/c3.min.css">
 <link rel="stylesheet" href="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootstrap.min.css">
 <link rel="stylesheet" href="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootstrap-theme.min.css">
-<script src-"https:="" github.com="" khurram-amin="" public_on_web2="" blob="" master="" h2cnopi27ri="" bootstrap.min.js"="">
-<script src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootbox.min.js">
+<script src-"https:="" github.com="" khurram-amin="" public_on_web2="" blob="" master="" h2cnopi27ri="" bootstrap.min.js"=""></script>
+<script src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootbox.min.js"></script>
     <script src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootbox.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.1/d3.min.js"></script>
