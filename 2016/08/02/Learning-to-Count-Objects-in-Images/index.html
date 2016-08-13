@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Yet another blog">
+    <title>Learning to Count Objects in Images by Lempitsky &amp; Zisserman - Yet another blog</title>
+    <meta name="author" content="Khurram Amin">
+    
+        <meta name="keywords" content="Machine Learning,Computer Vision,Andrew Zisserman,Crowd Counting,Victor Lempitsky">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="Download PDF from here. Paper Citations = 148. Published in Advances in Neural Information Processing Systems in 2010.
+
+
+1-minute Summary
+Number of objects in a scene can be determined using standard">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Learning to Count Objects in Images by Lempitsky & Zisserman">
+<meta property="og:url" content="http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/index.html">
+<meta property="og:site_name" content="Yet another blog">
+<meta property="og:description" content="Download PDF from here. Paper Citations = 148. Published in Advances in Neural Information Processing Systems in 2010.
+
+
+1-minute Summary
+Number of objects in a scene can be determined using standard">
+<meta property="og:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/results.png?raw=true">
+<meta property="og:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/qualitative_result.png?raw=true">
+<meta property="og:updated_time" content="2016-08-03T15:15:43.158Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learning to Count Objects in Images by Lempitsky & Zisserman">
+<meta name="twitter:description" content="Download PDF from here. Paper Citations = 148. Published in Advances in Neural Information Processing Systems in 2010.
+
+
+1-minute Summary
+Number of objects in a scene can be determined using standard">
+<meta name="twitter:image" content="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/results.png?raw=true">
+<meta name="twitter:creator" content="@m_khurram_amin">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://www.gravatar.com/avatar/09f888ccd3dee08575bfc32e8ed8f220?s=640"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-nuvue6sithwirecbhvw3dkaobiojqvtadsnhguwi7k04xklybw5djl1smadp.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-81742065-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+    
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Yet another blog</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="https://www.gravatar.com/avatar/09f888ccd3dee08575bfc32e8ed8f220?s=90"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+    
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/09f888ccd3dee08575bfc32e8ed8f220?s=110"/>
+            </a>
+            <span class="sidebar-profile-name">Khurram Amin</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://twitter.com/m_khurram_amin" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                    <span class="sidebar-button-desc">Twitter</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:khurram@mkhurram.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">Mail</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="3"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Learning to Count Objects in Images by Lempitsky &amp; Zisserman
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-08-02T15:00:00-04:00">
+	
+		    Aug 02, 2016
+    	
+    </time>
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>Download PDF from <a href="http://papers.nips.cc/paper/4043-learning-to-count-objects-in-images.pdf" target="_blank" rel="external">here</a>. Paper Citations = <a href="https://scholar.google.com.pk/scholar?q=learning+to+count+objects+in+images" target="_blank" rel="external">148</a>. Published in <strong>Advances in Neural Information Processing Systems</strong> in <strong>2010</strong>.</p>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#minute-summary"><span class="toc-text">1-minute Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#summary"><span class="toc-text">Summary</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#assumptions"><span class="toc-text">Assumptions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#methodology"><span class="toc-text">Methodology</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#input"><span class="toc-text">Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-automatically-count-objects"><span class="toc-text">How to automatically count objects?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-measure-dist.-."><span class="toc-text">How to measure \(dist(. , .)\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-establish-ground-truth-density"><span class="toc-text">How to establish ground-truth density?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-text">Results</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#key-insights"><span class="toc-text">Key Insights</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#criticism"><span class="toc-text">Criticism</span></a></li></ol>
+
+<h1 id="minute-summary">1-minute Summary</h1>
+<p>Number of objects in a scene can be determined using standard regression techniques. Some features are extracted from an image and then a linear transformation that transforms the features into count is learned by minimizing a cost function. In this paper, authors propose a novel distance measure which coupled with sparse annotations of objects in images can be used to solve this learning problem more efficently.</p>
+<h1 id="summary">Summary</h1>
+<h2 id="assumptions">Assumptions</h2>
+<span class="highlight-text danger">Suppose there exists some feature set $x$ such that its linear transformation maps to the ground-truth (object/crowd) density function i.e. $ F_i^0(p) = w^T x_p^i $ whereas $x_p^i$ is feature vector at pixel $p$ in image $i$. </span>
+
+<h2 id="methodology">Methodology</h2>
+<h3 id="input">Input</h3>
+<ol style="list-style-type: decimal">
+<li><p>A set of images <span class="math">\(I_1, I_2, ..., I_N\)</span></p></li>
+<li><p>Computed features <span class="math">\(x_p^i\)</span> for each pixel <span class="math">\(p\)</span> in each image <span class="math">\(i\)</span> in the set</p></li>
+<li><p>Annotations: a set of 2D points <span class="math">\(\textbf{P}_i = \{ P_1, P_2, ..., P_{C(i)} \} \)</span> representing the presence of object. <span class="math">\(C(i)\)</span> is the total count of objects in image <span class="math">\(i\)</span></p></li>
+</ol>
+<h3 id="how-to-automatically-count-objects">How to automatically count objects?</h3>
+<p>The linear transformation, that can convert <span class="math">\(x_p^i\)</span> to <span class="math">\(F_i^0(p)\)</span> can be learned by solving the following equation <span class="math">\[
+w = \underset{w}{\arg\min} \bigg( w^T w + \lambda \sum_{i=1}^{N} dist\big( F_i^0(.), F_i(. \vert w)\big ) \bigg)
+\]</span> Once the transformation parameters <span class="math">\(w\)</span> are known, count for any new image can be determined using <span class="math">\[
+\text{number of objects in image I} = \sum_{p \in I} w^T x_p
+\]</span></p>
+<h3 id="how-to-measure-dist.-.">How to measure <span class="math">\(dist(. , .)\)</span></h3>
+<p>Authors have defined a novel distance measure known as <em>MESA: Maximum Excess over SubArrays</em>. Given an image <span class="math">\(I\)</span>, the MESA distance <span class="math">\(D_{MESA}\)</span> between two functions <span class="math">\(F_1(p)\)</span> and <span class="math">\(F_2(p)\)</span> is defined as the largest absolute difference between sums of <span class="math">\(F_1(p)\)</span> and <span class="math">\(F_2(p)\)</span> over all box subarrays in <span class="math">\(I\)</span>: <span class="math">\[
+D_{MESA}( F_1, F_2 ) = \underset{B \in \textbf{B} }{max} \bigg \vert \sum_{p \in B} F_1(p) - \sum_{p \in B} F_2(p) \bigg \vert
+\]</span> To compute <span class="math">\(D_{MESA}\)</span> they take multiple windows (rectangles) over the image known as box hypothesis <strong>B</strong> then <span class="math">\(D_{MESA}\)</span> is simply the sum of absolute difference between two windows (rectangles) that differ most.</p>
+<h3 id="how-to-establish-ground-truth-density">How to establish ground-truth density?</h3>
+<p>Since objects (crowd) are discrete in nature i.e. there does exists a well defined boundary, in physical world, between two persons then it is easier to individually mark (with a dot) each object separately. But the process of converting this sparse marking into a continuous heat-map is not trivial. Authors have defined the object-density-map as <span class="math">\[
+\forall p \in I_i,  F_i^0(p) = \sum_{P \in \textbf{P}_i} Normal(p; P, \sigma^2 1_{2 \times 2})
+\]</span> Here, <span class="math">\(p\)</span> denotes a pixel, <span class="math">\(Normal(p; P, \sigma^2 1_{2 \times 2})\)</span> denotes a normalized Gaussian kernel evaluated at pixel <span class="math">\(p\)</span> with mean at the user placed dot <span class="math">\(P\)</span> and an isotropic covariance matrix with <span class="math">\(\sigma\)</span> being a small value.</p>
+<!--Given a set of images $I_1, I_2, ..., I_N$ and a ground-truth density map $F_i^0(p)$ for each image $i$ such that $\sum_{p \in I_i} F_i^0(p)$ equals the total number of objects present in the image then a set of parameters $w$ can be learned such that the mapping function $F_i(p \vert w)$ results in minimum error over the whole dataset. -->
+
+<h2 id="results">Results</h2>
+<div class="figure fig-100" style="width:;"><img class="fig-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/results.png?raw=true" alt=""></div>
+
+
+<div class="figure fig-100" style="width:;"><img class="fig-img" src="https://github.com/khurram-amin/public_on_web2/blob/master/l2coiibvlaaz/qualitative_result.png?raw=true" alt=""></div>
+
+
+
+<h1 id="key-insights">Key Insights</h1>
+<ol style="list-style-type: decimal">
+<li>The usage of sparse annotations to solve counting-as-regression-problem can help to increase dataset size by using different box hypothesis over the same image.</li>
+</ol>
+<h1 id="criticism">Criticism</h1>
+<ol style="list-style-type: decimal">
+<li><p>Mean Absolute Error (mAE) for object counting is not a good error measure since it entirely hides the complexity of scene. For example a mAE of 1 object/image corresponds to ~0.1% error if there were 1000 objects present in scene. But if there were only 0, 1 or 2 objects then the same measure corresponds to ~50% error.</p></li>
+<li><p>The assumption that there exists a linearly-separable-feature-space is very <span class="highlight-text orange">strict </span> and is not valid for complex scene structures.</p></li>
+</ol>
+<!-- # Applications -->
+
+
+
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Computer-Vision/">Computer Vision</a> <a class="tag tag--primary tag--small t-link" href="/tags/Crowd/">Crowd</a> <a class="tag tag--primary tag--small t-link" href="/tags/Machine-Learning/">Machine Learning</a> <a class="tag tag--primary tag--small t-link" href="/tags/Reviews/">Reviews</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/10/How-to-count-number-of-pilgrims-in-27th-Ramazan-image/"  data-tooltip="How to count number of pilgrims in 27th Ramazan image">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/02/hello-world/" data-tooltip="Hello World">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+        
+    </div>
+</article>
+
+
+
+
+<link rel="stylesheet" href="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/c3.min.css">
+<link rel="stylesheet" href="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootstrap.min.css">
+<link rel="stylesheet" href="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootstrap-theme.min.css">
+
+<script src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootstrap.min.js"></script>
+<script src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootbox.min.js"></script>
+<script src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/bootbox.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.1/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.26/jquery.autocomplete.min.js"></script>
+<script src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/model-graph.js"></script>
+<script src="https://github.com/khurram-amin/public_on_web2/blob/master/H2cnopi27ri/file_field.js"></script>
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 Khurram Amin. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/10/How-to-count-number-of-pilgrims-in-27th-Ramazan-image/"  data-tooltip="How to count number of pilgrims in 27th Ramazan image">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/02/hello-world/" data-tooltip="Hello World">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://mkhurram.com/2016/08/02/Learning-to-Count-Objects-in-Images/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        
+
+
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://www.gravatar.com/avatar/09f888ccd3dee08575bfc32e8ed8f220?s=110"/>
+        
+            <h4 id="about-card-name">Khurram Amin</h4>
+        
+            <h5 id="about-card-bio"><p>I am a researcher and a wannabe entrepreneur</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Computer Vision &amp; Machine Learning Researcher</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Makkah, KSA
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-i4qo6jx6jji9fg0dftpya6ivemizsbow4fhow76d8dwpm7m1wbvi378ssumx.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+
+
+
+</html>
