@@ -29,7 +29,7 @@ A very informative tutorial on Convolutional Neural Networks by Andrej Karpath c
 <meta property="og:image" content="http://cs231n.github.io/assets/cnn/depthcol.jpeg">
 <meta property="og:image" content="http://cs231n.github.io/assets/nn1/neuron_model.jpeg">
 <meta property="og:image" content="http://cs231n.github.io/assets/cnn/weights.jpeg">
-<meta property="og:updated_time" content="2016-09-03T14:08:54.062Z">
+<meta property="og:updated_time" content="2016-09-03T14:12:43.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Convolutional Layer in CNN">
 <meta name="twitter:description" content="Convolutional Layer
@@ -251,12 +251,8 @@ A very informative tutorial on Convolutional Neural Networks by Andrej Karpath c
 <li>In practice some kind of padding is done on the borders of input volume to avoid reducing the width and height of output volume during convolutional operation. In such a case the number of nodes and total parameters and connections change accordingly while the number of LP remain same.</li>
 </ol>
 <p>Another key point to note over here is that a single convolutional filter operates on the entire depth of the input volume and thus have the same depth as input volume. While the depth of output volume can be controlled by number of features parameter.</p>
-<iframe src="//cs231n.github.io/assets/conv-demo/index.html" width="100%" height="680px;" style="border:none;"> <caption>
-Figure 6: The above figure shows a 3 channel input of size 5x5. Each channel is stacked in a column separately on left. The 5x5 input is zero-padded with p = 1. The stride is 2. The first red column from left shows the first 3x3x3 kernel whereas each channel is stacked over one another. Similarly the second red column from red shows the second 3x3x3 convolutional filter. The green box on right shows the output of convolutional operation. (This visualization is taken from Stanford’s CS231n course notes).
-</caption></iframe>
-
-
-
+<iframe src="//cs231n.github.io/assets/conv-demo/index.html" width="100%" height="680px;" style="border:none;"> </iframe>
+<p>Figure 6: The above figure shows a 3 channel input of size 5x5. Each channel is stacked in a column separately on left. The 5x5 input is zero-padded with p = 1. The stride is 2. The first red column from left shows the first 3x3x3 kernel whereas each channel is stacked over one another. Similarly the second red column from red shows the second 3x3x3 convolutional filter. The green box on right shows the output of convolutional operation. (This visualization is taken from Stanford’s CS231n course notes).</p>
 <div class="figure fig-100" style="width:;"><img class="fig-img" src="http://cs231n.github.io/assets/cnn/weights.jpeg" alt="Figure 7: Each block in above figure shows a feature kernel learned by the first layer of an example convolutional neural network There are 96 kernels. (image is taken from Stanford's CS231n lecture notes)"><span class="caption">Figure 7: Each block in above figure shows a feature kernel learned by the first layer of an example convolutional neural network There are 96 kernels. (image is taken from Stanford's CS231n lecture notes)</span></div>
 
 <h3 id="how-to-convolutional-layer-removes-some-of-above-mentioned-drawbacks">How to convolutional layer removes some of above mentioned drawbacks?</h3>
