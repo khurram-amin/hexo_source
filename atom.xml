@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-11-25T14:46:18.393Z</updated>
+  <updated>2016-11-25T14:49:33.613Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://mkhurram.com/2016/11/24/Driving-Assistant-Technology-Overview/"/>
     <id>http://mkhurram.com/2016/11/24/Driving-Assistant-Technology-Overview/</id>
     <published>2016-11-25T04:00:18.000Z</published>
-    <updated>2016-11-25T14:46:18.393Z</updated>
+    <updated>2016-11-25T14:49:33.613Z</updated>
     
     <content type="html"><![CDATA[<h1 id="driving-assistant-technology">Driving Assistant Technology</h1>
-<hr>
-<blockquote>
-<p>Go from point A to B (<strong>objective</strong>). Do not hit something and follow the rules (<strong>constraints</strong>). ****</p>
+<blockquote><p>Go from point A to B (<strong>objective</strong>). Do not hit something and follow the rules (<strong>constraints</strong>).</p>
 </blockquote>
+
+
 <p>Above statement highlights the requirements of a self driving vehicle. First sentence states the main objective of such a system while the second sentence states the necessary conditions under which the objective should be achieved.</p>
 <p>Based on the requirements, the self-driving-system can be broken into sub-systems which are required to achieve the objective under the stated constraints. One of the possible sub-division is:</p>
 <ol style="list-style-type: decimal">
@@ -53,9 +53,7 @@
     <summary type="html">
     
       &lt;h1 id=&quot;driving-assistant-technology&quot;&gt;Driving Assistant Technology&lt;/h1&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Go from point A to B (&lt;strong&gt;objective&lt;/strong
+&lt;blockquote&gt;&lt;p&gt;Go from point A to B (&lt;strong&gt;objective&lt;/strong&gt;). Do
     
     </summary>
     
