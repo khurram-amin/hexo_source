@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mkhurram.com/"/>
-  <updated>2016-11-25T14:41:26.937Z</updated>
+  <updated>2016-11-25T14:46:18.393Z</updated>
   <id>http://mkhurram.com/</id>
   
   <author>
@@ -20,19 +20,29 @@
     <link href="http://mkhurram.com/2016/11/24/Driving-Assistant-Technology-Overview/"/>
     <id>http://mkhurram.com/2016/11/24/Driving-Assistant-Technology-Overview/</id>
     <published>2016-11-25T04:00:18.000Z</published>
-    <updated>2016-11-25T14:41:26.937Z</updated>
+    <updated>2016-11-25T14:46:18.393Z</updated>
     
     <content type="html"><![CDATA[<h1 id="driving-assistant-technology">Driving Assistant Technology</h1>
+<hr>
 <blockquote>
-<p>Go from point A to B (<strong>objective</strong>). Do not hit something and follow the rules (<strong>constraints</strong>).</p>
+<p>Go from point A to B (<strong>objective</strong>). Do not hit something and follow the rules (<strong>constraints</strong>). ****</p>
 </blockquote>
 <p>Above statement highlights the requirements of a self driving vehicle. First sentence states the main objective of such a system while the second sentence states the necessary conditions under which the objective should be achieved.</p>
-<p>Based on the requirements, the self-driving-system can be broken into sub-systems which are required to achieve the objective under the stated constraints. One of the possible sub-division is: 1. <strong>something:</strong> object detection and localization 2. <strong>drivable path detection:</strong> surface geometry estimation and lane detection 3. <strong>what rules:</strong> traffic signs detection for dynaimc update of rules 4. <strong>do not hit something:</strong> target selection and collision estimation 5. <strong>A to B:</strong> path planning 6. <strong>follow rules:</strong> will the next action result in some rule violation? 6. <strong>Go:</strong> vehicle’s actuator control unit</p>
+<p>Based on the requirements, the self-driving-system can be broken into sub-systems which are required to achieve the objective under the stated constraints. One of the possible sub-division is:</p>
+<ol style="list-style-type: decimal">
+<li><strong>something:</strong> object detection and localization</li>
+<li><strong>drivable path detection:</strong> surface geometry estimation and lane detection</li>
+<li><strong>what rules:</strong> traffic signs detection for dynaimc update of rules</li>
+<li><strong>do not hit something:</strong> target selection and collision estimation</li>
+<li><strong>A to B:</strong> path planning</li>
+<li><strong>follow rules:</strong> will the next action result in some rule violation?</li>
+<li><strong>Go:</strong> vehicle’s actuator control unit</li>
+</ol>
 <h2 id="object-detection-localization">1. Object Detection &amp; Localization:</h2>
 <p>The very first step for effective interaction with an enviorment is the ability to <em>notice</em> the presence and physical arrangement of objects in the scene. The goal of this sub-module is to provide such an ability to the assistant-system.</p>
 <p>The functional requirements of this module are: detection, classification into appropriate categories and exact localization of the extents, of all the objects present in the visual field of view of mobile assistant.</p>
 <p>To achieve this goal one can use some classification algorithm from machine learning literature. The recent advances in Deep Learning have increased the accuracy of such systems.</p>
-<p>Current state of the art results from such a module are given below: <a href="https://youtu.be/GCMXXXmxG-I?t=1700" target="_blank" rel="external">Mobileye</a></p>
+<p>Current state of the art results from such a module are shown in video below:</p>
 <div class="video-container"><iframe src="//www.youtube.com/embed/GCMXXXmxG-I?start=1707&end=1760" "="" frameborder="0" allowfullscreen></iframe></div>
 
 
@@ -43,8 +53,9 @@
     <summary type="html">
     
       &lt;h1 id=&quot;driving-assistant-technology&quot;&gt;Driving Assistant Technology&lt;/h1&gt;
+&lt;hr&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Go from point A to B (&lt;strong&gt;objective&lt;/strong&gt;). D
+&lt;p&gt;Go from point A to B (&lt;strong&gt;objective&lt;/strong
     
     </summary>
     
